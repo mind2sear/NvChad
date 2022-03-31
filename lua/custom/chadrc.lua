@@ -7,7 +7,7 @@ M.options = {
    -- custom = {}
    -- general nvim/vim options , check :h optionname to know more about an option
 
-   clipboard = "",
+   clipboard = "unnamed",
    cmdheight = 1,
    ruler = false,
    hidden = true,
@@ -233,3 +233,7 @@ M.mappings.plugins = {
 }
 
 return M
+
+
+
+
