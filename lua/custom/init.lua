@@ -111,3 +111,7 @@ vim.o.swapfile = false
 vim.o.list = true
 vim.o.scrolloff = 8
 vim.o.sidescrolloff = 8
+
+
+-- 等待加入更多信息
+
