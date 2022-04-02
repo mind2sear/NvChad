@@ -55,11 +55,37 @@ map('n', '<leader>tm', ':TableModeToggle<CR>')
 -- markdown预览
 map('n', '<A-r>', ':MarkdownPreviewToggle<CR>')
 
+-- Y复制当前位置到结尾
+map('n', 'Y', 'y$')
+
+-- 在V模式下复制到系统剪贴板
+map('v', 'Y', '"+y')
+
+-- 普通模式下快速缩进
+map('n', '<', '<<')
+map('n', '>', '>>')
+
+-- 删除成对符号如(),[],<>及其中间的内容
+map('n', 'dy', 'd%')
+
+-- 查找连续4个空格转为tab
+map ('n', '<leader>tt', ':%s/    /\t/g')
+map ('v', '<leader>tt', ':s/    /\t/g')
+
+-- 向前向后快跳5个词
+map('n','W', '5w')
+map('n','B', '5b')
+
+-- 查找并替换,全局
+map('n', '<leader>s', ':%s//g<left><left>')
+
+--delete blank line
+map("n", '<leader>ds', ':g/^s*$/d<CR>')
 -------------------按键映射---------------------
 
 -------------------杂项配置---------------------
 -- 设置屏幕中间竖条
--- vim.o.colorcolumn = "130"
+vim.o.colorcolumn = "100"
 
 -- 禁用多光标警告
 vim.g.VM_show_warnings = 0
@@ -74,3 +100,14 @@ vim.g.table_mode_corner='|'
 -- 自动切换输入法配置
 vim.o.ttimeoutlen=0
 -------------------杂项配置---------------------
+vim.wo.cursorline = true
+vim.wo.signcolumn = "yes"
+vim.o.autoread = true
+vim.bo.autoread = true
+vim.o.whichwrap = 'b,s,<,>,[,],h,l'
+vim.o.backup = false
+vim.o.writebackup = false
+vim.o.swapfile = false
+vim.o.list = true
+vim.o.scrolloff = 8
+vim.o.sidescrolloff = 8

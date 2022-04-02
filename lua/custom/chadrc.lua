@@ -7,8 +7,8 @@ M.options = {
    -- custom = {}
    -- general nvim/vim options , check :h optionname to know more about an option
 
-   clipboard = "unnamed",
-   cmdheight = 1,
+   clipboard = "unnamedplus",
+   cmdheight = 2,
    ruler = false,
    hidden = true,
    ignorecase = true,
@@ -25,17 +25,16 @@ M.options = {
    timeoutlen = 400,
    updatetime = 250,
    undofile = true,
+   nav_wrapper = true,
    fillchars = { eob = " "},
    shadafile = vim.opt.shadafile,
-   -- add some personal option
-   list = true,
-
    -- NvChad options
    nvChad = {
       copy_cut = true, -- copy cut text ( x key ), visual and normal mode
       copy_del = true, -- copy deleted text ( dd key ), visual and normal mode
       insert_nav = true, -- navigation in insertmode
       window_nav = true,
+      theme_toggler = true,
       terminal_numbers = false,
 
       -- updater
@@ -48,12 +47,12 @@ M.options = {
 
 M.ui = {
    hl_override = "", -- path of your file that contains highlights
-   italic_comments = false,
-   theme = "gruvbox", -- default theme
+   italic_comments = true,
+   theme = "tokyodark", -- default theme
 
    -- Change terminal bg to nvim theme's bg color so it'll match well
    -- For Ex : if you have onedark set in nvchad, set onedark's bg color on your terminal
-   transparency = false,
+   transparency = true,
 }
 
 ---- PLUGIN OPTIONS ----
